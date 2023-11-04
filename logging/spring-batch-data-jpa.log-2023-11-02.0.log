@@ -1,0 +1,322 @@
+2023-11-01:14:39:03  INFO 23988 --- [main] n.b.demo.springbatchdatajpa.MainTests    : Starting MainTests using Java 17.0.3 with PID 23988 (started by jobiek in /Users/jobiek/src/spring-batch-data-jpa)
+2023-11-01:14:39:03 DEBUG 23988 --- [main] n.b.demo.springbatchdatajpa.MainTests    : Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-11-01:14:39:03  INFO 23988 --- [main] n.b.demo.springbatchdatajpa.MainTests    : The following 1 profile is active: "dev"
+2023-11-01:14:39:04  INFO 23988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-01:14:39:04  INFO 23988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-11-01:14:39:05  INFO 23988 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-01:14:39:05  INFO 23988 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-01:14:39:05  INFO 23988 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-01:14:39:05  INFO 23988 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-01:14:39:05  INFO 23988 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-01:14:39:05  INFO 23988 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-01:14:39:06  INFO 23988 --- [main] n.b.demo.springbatchdatajpa.MainTests    : Started MainTests in 3.283 seconds (process running for 4.689)
+2023-11-01:14:39:06  INFO 23988 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2023-11-01:14:39:07  INFO 23988 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-01:21:35:31  INFO 30778 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Starting Main using Java 17.0.3 with PID 30778 (/Users/jobiek/src/spring-batch-data-jpa/target/classes started by jobiek in /Users/jobiek/src/spring-batch-data-jpa)
+2023-11-01:21:35:31 DEBUG 30778 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-11-01:21:35:31  INFO 30778 --- [main] n.bieker.demo.springbatchdatajpa.Main    : The following 1 profile is active: "dev"
+2023-11-01:21:35:32  INFO 30778 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-01:21:35:32  INFO 30778 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interfaces.
+2023-11-01:21:35:32  INFO 30778 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-01:21:35:32  INFO 30778 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-01:21:35:32  INFO 30778 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-01:21:35:33  INFO 30778 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-01:21:35:34  INFO 30778 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-01:21:35:34  INFO 30778 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-01:21:35:34  INFO 30778 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Started Main in 4.279 seconds (process running for 5.279)
+2023-11-01:21:35:34  INFO 30778 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2023-11-01:21:35:34  INFO 30778 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=vsnrWandlerJob]] launched with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}'}]
+2023-11-01:21:35:34  INFO 30778 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [step1]
+2023-11-01:21:35:35 ERROR 30778 --- [main] o.s.batch.core.step.AbstractStep         : Encountered an error executing step step1 in job vsnrWandlerJob
+
+org.springframework.batch.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/jobiek/src/spring-batch-data-jpa/input/input.csv]], input=[ ,Alfreds Futterkiste]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:198) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:95) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.batch.item.file.FlatFileItemReader$$SpringCGLIB$$0.read(<generated>) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:108) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:182) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.lambda$provide$0(SimpleChunkProvider.java:132) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:362) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:140) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:127) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:69) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:389) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:313) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:256) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:362) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:140) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:241) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:229) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:418) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:317) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:211) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:195) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:175) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:170) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:165) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:762) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:752) ~[spring-boot-3.1.5.jar:3.1.5]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:750) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at nrw.bieker.demo.springbatchdatajpa.Main.main(Main.java:10) ~[classes/:na]
+Caused by: org.springframework.batch.item.file.transform.IncorrectTokenCountException: Incorrect number of tokens found in record: expected 2 actual 1
+	at org.springframework.batch.item.file.transform.AbstractLineTokenizer.tokenize(AbstractLineTokenizer.java:134) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:42) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:194) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	... 61 common frames omitted
+
+2023-11-01:21:35:35  INFO 30778 --- [main] o.s.batch.core.step.AbstractStep         : Step: [step1] executed in 91ms
+2023-11-01:21:35:35  INFO 30778 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=vsnrWandlerJob]] completed with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}'}] and the following status: [FAILED] in 185ms
+2023-11-01:21:35:35  INFO 30778 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-01:21:37:55  INFO 30824 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Starting Main using Java 17.0.3 with PID 30824 (/Users/jobiek/src/spring-batch-data-jpa/target/classes started by jobiek in /Users/jobiek/src/spring-batch-data-jpa)
+2023-11-01:21:37:55 DEBUG 30824 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-11-01:21:37:55  INFO 30824 --- [main] n.bieker.demo.springbatchdatajpa.Main    : The following 1 profile is active: "dev"
+2023-11-01:21:37:56  INFO 30824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-01:21:37:56  INFO 30824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
+2023-11-01:21:37:57  INFO 30824 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-01:21:37:57  INFO 30824 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-01:21:37:57  INFO 30824 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-01:21:37:57  INFO 30824 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-01:21:37:58  INFO 30824 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-01:21:37:58  INFO 30824 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-01:21:37:59  INFO 30824 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Started Main in 4.542 seconds (process running for 5.64)
+2023-11-01:21:37:59  INFO 30824 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2023-11-01:21:37:59  INFO 30824 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=vsnrWandlerJob]] launched with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}]
+2023-11-01:21:37:59  INFO 30824 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [step1]
+2023-11-01:21:37:59 ERROR 30824 --- [main] o.s.batch.core.step.AbstractStep         : Encountered an error executing step step1 in job vsnrWandlerJob
+
+org.springframework.batch.item.file.FlatFileParseException: Parsing error at line: 2 in resource=[file [/Users/jobiek/src/spring-batch-data-jpa/input/input.csv]], input=[  ,Alfreds Futterkiste]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:198) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:95) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.batch.item.file.FlatFileItemReader$$SpringCGLIB$$0.read(<generated>) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:108) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:182) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.lambda$provide$0(SimpleChunkProvider.java:132) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:362) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:140) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:127) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:69) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:389) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:313) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:256) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:362) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:140) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:241) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:229) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:418) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:317) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:211) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:195) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:175) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:170) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:165) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:762) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:752) ~[spring-boot-3.1.5.jar:3.1.5]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:750) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at nrw.bieker.demo.springbatchdatajpa.Main.main(Main.java:10) ~[classes/:na]
+Caused by: org.springframework.batch.item.file.transform.IncorrectTokenCountException: Incorrect number of tokens found in record: expected 2 actual 1
+	at org.springframework.batch.item.file.transform.AbstractLineTokenizer.tokenize(AbstractLineTokenizer.java:134) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:42) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:194) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	... 61 common frames omitted
+
+2023-11-01:21:37:59  INFO 30824 --- [main] o.s.batch.core.step.AbstractStep         : Step: [step1] executed in 80ms
+2023-11-01:21:37:59  INFO 30824 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=vsnrWandlerJob]] completed with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}] and the following status: [FAILED] in 182ms
+2023-11-01:21:37:59  INFO 30824 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-01:21:38:42  INFO 30839 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Starting Main using Java 17.0.3 with PID 30839 (/Users/jobiek/src/spring-batch-data-jpa/target/classes started by jobiek in /Users/jobiek/src/spring-batch-data-jpa)
+2023-11-01:21:38:42 DEBUG 30839 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-11-01:21:38:42  INFO 30839 --- [main] n.bieker.demo.springbatchdatajpa.Main    : The following 1 profile is active: "dev"
+2023-11-01:21:38:43  INFO 30839 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-01:21:38:43  INFO 30839 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+2023-11-01:21:38:43  INFO 30839 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-01:21:38:43  INFO 30839 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-01:21:38:43  INFO 30839 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-01:21:38:44  INFO 30839 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-01:21:38:44  INFO 30839 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-01:21:38:44  INFO 30839 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-01:21:38:45  INFO 30839 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Started Main in 4.324 seconds (process running for 5.181)
+2023-11-01:21:38:45  INFO 30839 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2023-11-01:21:38:45  INFO 30839 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=vsnrWandlerJob]] launched with the following parameters: [{'run.id':'{value=3, type=class java.lang.Long, identifying=true}'}]
+2023-11-01:21:38:45  INFO 30839 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [step1]
+2023-11-01:21:38:45 ERROR 30839 --- [main] o.s.batch.core.step.AbstractStep         : Encountered an error executing step step1 in job vsnrWandlerJob
+
+java.lang.NullPointerException: Cannot invoke "nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository.findByCompanyName(String)" because "this.customerRepository" is null
+	at nrw.bieker.demo.springbatchdatajpa.processors.CustomerProcessor.process(CustomerProcessor.java:28) ~[classes/:na]
+	at nrw.bieker.demo.springbatchdatajpa.processors.CustomerProcessor.process(CustomerProcessor.java:14) ~[classes/:na]
+	at org.springframework.batch.item.support.CompositeItemProcessor.processItem(CompositeItemProcessor.java:91) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.item.support.CompositeItemProcessor.process(CompositeItemProcessor.java:78) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.batch.item.support.CompositeItemProcessor$$SpringCGLIB$$0.process(<generated>) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.doProcess(SimpleChunkProcessor.java:146) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.transform(SimpleChunkProcessor.java:322) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.process(SimpleChunkProcessor.java:220) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:75) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:389) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:313) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:256) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:362) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:140) ~[spring-batch-infrastructure-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:241) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:229) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:418) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:317) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:59) ~[spring-batch-core-5.0.3.jar:5.0.3]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:211) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:195) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:175) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:170) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:165) ~[spring-boot-autoconfigure-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:762) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:752) ~[spring-boot-3.1.5.jar:3.1.5]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:750) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at nrw.bieker.demo.springbatchdatajpa.Main.main(Main.java:10) ~[classes/:na]
+
+2023-11-01:21:38:45  INFO 30839 --- [main] o.s.batch.core.step.AbstractStep         : Step: [step1] executed in 91ms
+2023-11-01:21:38:46  INFO 30839 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=vsnrWandlerJob]] completed with the following parameters: [{'run.id':'{value=3, type=class java.lang.Long, identifying=true}'}] and the following status: [FAILED] in 186ms
+2023-11-01:21:38:46  INFO 30839 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-02:21:02:25  INFO 37810 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Starting Main using Java 17.0.3 with PID 37810 (/Users/jobiek/src/spring-batch-data-jpa/target/classes started by jobiek in /Users/jobiek/src/spring-batch-data-jpa)
+2023-11-02:21:02:25 DEBUG 37810 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-11-02:21:02:25  INFO 37810 --- [main] n.bieker.demo.springbatchdatajpa.Main    : The following 1 profile is active: "dev"
+2023-11-02:21:02:25  INFO 37810 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-02:21:02:25  INFO 37810 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2023-11-02:21:02:25  INFO 37810 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-02:21:02:25  WARN 37810 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'customerRepository' defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on NorthwindConfig: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on NorthwindConfig] for bean 'customerRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on BatchConfig] bound.
+2023-11-02:21:02:25  INFO 37810 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-02:21:02:25 ERROR 37810 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'customerRepository', defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on NorthwindConfig, could not be registered. A bean with that name has already been defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on BatchConfig and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-11-02:21:42:02  INFO 38634 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Starting Main using Java 17.0.3 with PID 38634 (/Users/jobiek/src/spring-batch-data-jpa/target/classes started by jobiek in /Users/jobiek/src/spring-batch-data-jpa)
+2023-11-02:21:42:02 DEBUG 38634 --- [main] n.bieker.demo.springbatchdatajpa.Main    : Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-11-02:21:42:02  INFO 38634 --- [main] n.bieker.demo.springbatchdatajpa.Main    : The following 1 profile is active: "dev"
+2023-11-02:21:42:03  INFO 38634 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-02:21:42:03  INFO 38634 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2023-11-02:21:42:03  INFO 38634 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-02:21:42:03  WARN 38634 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'customerRepository' defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on NorthwindConfig: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on NorthwindConfig] for bean 'customerRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on BatchConfig] bound.
+2023-11-02:21:42:03  INFO 38634 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-02:21:42:03 ERROR 38634 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'customerRepository', defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on NorthwindConfig, could not be registered. A bean with that name has already been defined in nrw.bieker.demo.springbatchdatajpa.repositories.customers.CustomerRepository defined in @EnableJpaRepositories declared on BatchConfig and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
